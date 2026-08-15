@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef1f5">
+  <meta name="description" content="你的名字的双语个人简历与作品集">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="你的名字｜个人简历">
+  <meta property="og:description" content="双语个人简历、精选项目与工作经历">
+  <title>你的名字｜个人简历</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#panel-stage" data-i18n="skip">跳到主要内容</a>
+  <div class="page-glow glow-one" aria-hidden="true"></div>
+  <div class="page-glow glow-two" aria-hidden="true"></div>
+
+  <div class="resume-app">
+    <aside class="profile-sidebar" aria-label="个人信息与页面导航" data-i18n-aria="sidebarLabel">
+      <div class="sidebar-brand">
+        <a href="#about" class="monogram" aria-label="返回关于页面" data-i18n-aria="homeLabel">YN</a>
+        <span>PORTFOLIO / 2026</span>
+      </div>
+
+      <section class="profile-summary">
+        <div class="avatar" aria-label="头像占位" data-i18n-aria="portraitLabel">
+          <span>YN</span>
+          <i></i>
+        </div>
+        <div>
+          <p class="availability"><i></i><span data-i18n="available">正在寻找新的机会</span></p>
+          <h2 data-i18n="name">你的名字</h2>
+          <p class="profile-role" data-i18n="role">你的职位 / 专业方向</p>
+          <p class="profile-location">Toronto, Canada</p>
+        </div>
+      </section>
+
+      <nav class="section-nav" aria-label="简历栏目" data-i18n-aria="navLabel" role="tablist">
+        <button class="nav-tab is-active" type="button" role="tab" id="tab-about" aria-selected="true" aria-controls="about" data-tab="about">
+          <span>01</span><b data-i18n="navAbout">关于</b><i>↗</i>
+        </button>
+        <button class="nav-tab" type="button" role="tab" id="tab-experience" aria-selected="false" aria-controls="experience" data-tab="experience">
+          <span>02</span><b data-i18n="navExperience">经历</b><i>↗</i>
+        </button>
+        <button class="nav-tab" type="button" role="tab" id="tab-projects" aria-selected="false" aria-controls="projects" data-tab="projects">
+          <span>03</span><b data-i18n="navProjects">项目</b><i>↗</i>
+        </button>
+        <button class="nav-tab" type="button" role="tab" id="tab-skills" aria-selected="false" aria-controls="skills" data-tab="skills">
+          <span>04</span><b data-i18n="navSkills">技能与证书</b><i>↗</i>
+        </button>
+      </nav>
+
+      <div class="sidebar-contact">
+        <div class="contact-row">
+          <span data-i18n="emailLabel">邮箱</span>
+          <a href="mailto:you@example.com">you@example.com</a>
+        </div>
+        <div class="social-row">
+          <a href="#" aria-label="LinkedIn">LinkedIn ↗</a>
+          <a href="#" aria-label="GitHub">GitHub ↗</a>
+        </div>
+        <a class="resume-download" href="resume.pdf" download>
+          <span data-i18n="downloadResume">下载 PDF 简历</span><b>↓</b>
+        </a>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="workspace-header">
+        <div class="page-indicator" aria-live="polite">
+          <span data-current-index>01</span>
+          <i></i>
+          <span>04</span>
+          <b data-current-label data-i18n="navAbout">关于</b>
+        </div>
+        <div class="header-actions">
+          <div class="language-switch" role="group" aria-label="语言切换" data-i18n-aria="languageLabel">
+            <button type="button" class="language-option is-active" data-lang="zh" aria-pressed="true">中</button>
+            <button type="button" class="language-option" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="切换深浅色" data-i18n-aria="themeLabel">
+            <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5 8.5 8.5 0 1 0 20.5 14.1Z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="panel-stage" id="panel-stage">
+        <section class="tab-panel is-active" id="about" role="tabpanel" aria-labelledby="tab-about" data-panel="about">
+          <div class="panel-heading">
+            <div><span>01 /</span><p data-i18n="aboutEyebrow">个人概览</p></div>
+            <h1 data-i18n-html="aboutTitle">少一点篇幅，<br><em>多一点重点。</em></h1>
+          </div>
+          <div class="panel-grid about-grid">
+            <article class="card intro-card">
+              <span class="card-label" data-i18n="hello">你好，我是</span>
+              <h3><span data-i18n="name">你的名字</span><em>.</em></h3>
+              <p data-i18n-html="intro">一名专注于 <strong>你的专业方向</strong> 的实践者。我擅长把复杂问题梳理清楚，并交付简洁、可靠、真正有用的结果。</p>
+              <div class="fact-list">
+                <div><span data-i18n="locationLabel">所在地</span><b>Toronto, Canada</b></div>
+                <div><span data-i18n="focusLabel">方向</span><b data-i18n="focusValue">你的专业方向</b></div>
+                <div><span data-i18n="languagesLabel">语言</span><b data-i18n="languageValue">中文 · English</b></div>
+              </div>
+            </article>
+
+            <article class="card statement-card">
+              <span class="card-label">NOW / 2026</span>
+              <div class="statement-visual" aria-hidden="true"><span>YN</span><i></i><i></i></div>
+              <p data-i18n="statement">保持好奇，持续创造。</p>
+            </article>
+
+            <article class="card metric-card metric-blue">
+              <span>01</span>
+              <strong data-count="3" data-suffix="+">0+</strong>
+              <p data-i18n="yearsMetric">年专业经验</p>
+            </article>
+            <article class="card metric-card">
+              <span>02</span>
+              <strong data-count="8">0</strong>
+              <p data-i18n="projectsMetric">个精选项目</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="experience" role="tabpanel" aria-labelledby="tab-experience" data-panel="experience" hidden>
+          <div class="panel-heading">
+            <div><span>02 /</span><p data-i18n="experienceEyebrow">经历与教育</p></div>
+            <h1 data-i18n-html="experienceTitle">经历不必很长，<br><em>成果需要清楚。</em></h1>
+          </div>
+          <div class="panel-grid experience-grid">
+            <article class="card timeline-card">
+              <div class="timeline-title"><span class="card-label" data-i18n="workHistory">工作经历</span><span>2022 — 2026</span></div>
+              <div class="timeline-list">
+                <article class="timeline-entry is-open">
+                  <time data-i18n="timeOne">2024 — 至今</time>
+                  <span><b data-i18n="jobOne">你的职位</b><small data-i18n="companyOne">公司 / 组织名称 · Toronto</small></span>
+                  <button class="timeline-toggle" type="button" aria-expanded="true" aria-label="展开或收起经历详情" data-i18n-aria="experienceToggleLabel">−</button>
+                  <p data-i18n="achievementOne">用一句话说明你解决的问题、采取的行动和可量化的成果。</p>
+                </article>
+                <article class="timeline-entry">
+                  <time>2022 — 2024</time>
+                  <span><b data-i18n="jobTwo">上一段职位</b><small data-i18n="companyTwo">公司 / 组织名称 · 城市</small></span>
+                  <button class="timeline-toggle" type="button" aria-expanded="false" aria-label="展开或收起经历详情" data-i18n-aria="experienceToggleLabel">＋</button>
+                  <p data-i18n="achievementTwo">突出一项最能证明能力或成长的代表性贡献。</p>
+                </article>
+              </div>
+            </article>
+
+            <article class="card education-card">
+              <div class="card-top"><span class="card-label" data-i18n="education">教育背景</span><span>↗</span></div>
+              <div><time>2018 — 2022</time><h3 data-i18n="degree">你的专业与学位</h3><p data-i18n="school">学校名称 · 城市</p></div>
+            </article>
+
+            <article class="card focus-card">
+              <span class="card-label" data-i18n="currentFocus">当前关注</span>
+              <div class="focus-ring" aria-hidden="true"><i></i><i></i><span>01</span></div>
+              <p data-i18n="focusText">在这里写下你正在学习、研究或希望深入发展的方向。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="projects" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" hidden>
+          <div class="panel-heading">
+            <div><span>03 /</span><p data-i18n="projectsEyebrow">精选项目</p></div>
+            <h1 data-i18n-html="projectsTitle">项目不用很多，<br><em>留下代表作。</em></h1>
+          </div>
+          <div class="panel-grid projects-grid">
+            <article class="card project-card project-featured">
+              <div class="project-art art-one" aria-hidden="true"><span>01</span><div class="mini-ui"><i></i><i></i><b></b></div></div>
+              <div class="project-content">
+                <div class="project-meta"><span data-i18n="projectOneType">数据产品 · 2026</span><span>Python / SQL</span></div>
+                <h3 data-i18n="projectOneTitle">项目名称一</h3>
+                <p data-i18n="projectOneBody">简要说明项目解决的问题、你的角色和最终成果。</p>
+                <button class="project-open" type="button" data-project="one"><span data-i18n="viewProject">查看案例</span><b>↗</b></button>
+              </div>
+            </article>
+
+            <article class="card project-card project-compact">
+              <div class="compact-mark mark-orange"><span>02</span><i></i><i></i><i></i></div>
+              <div class="project-content">
+                <div class="project-meta"><span data-i18n="projectTwoType">研究项目 · 2025</span><span>Strategy</span></div>
+                <h3 data-i18n="projectTwoTitle">项目名称二</h3>
+                <button class="project-open icon-only" type="button" data-project="two" aria-label="查看项目二" data-i18n-aria="projectTwoLabel">↗</button>
+              </div>
+            </article>
+
+            <article class="card project-card project-compact">
+              <div class="compact-mark mark-lime"><span>03</span><div class="stack"><i></i><i></i><i></i></div></div>
+              <div class="project-content">
+                <div class="project-meta"><span data-i18n="projectThreeType">个人作品 · 2025</span><span>Web</span></div>
+                <h3 data-i18n="projectThreeTitle">项目名称三</h3>
+                <button class="project-open icon-only" type="button" data-project="three" aria-label="查看项目三" data-i18n-aria="projectThreeLabel">↗</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="skills" role="tabpanel" aria-labelledby="tab-skills" data-panel="skills" hidden>
+          <div class="panel-heading">
+            <div><span>04 /</span><p data-i18n="skillsEyebrow">技能与证书</p></div>
+            <h1 data-i18n-html="skillsTitle">让能力结构，<br><em>一眼就能看懂。</em></h1>
+          </div>
+          <div class="panel-grid skills-grid">
+            <article class="card skills-card">
+              <div class="card-top"><span class="card-label" data-i18n="coreSkills">核心技能</span><span data-skill-status data-i18n="skillHint">点击标签点亮</span></div>
+              <div class="skill-cloud" role="group" aria-label="技能选择" data-i18n-aria="skillGroupLabel">
+                <button type="button">Python</button><button type="button">SQL</button><button type="button" data-i18n="skillAnalysis">数据分析</button><button type="button" data-i18n="skillResearch">用户研究</button><button type="button" data-i18n="skillManagement">项目管理</button><button type="button" data-i18n="skillStory">叙事表达</button><button type="button">Figma</button><button type="button">Git</button>
+              </div>
+              <div class="skill-bars">
+                <div><span data-i18n="technical">技术与工具</span><i style="--level:88%"></i></div>
+                <div><span data-i18n="communication">沟通与协作</span><i style="--level:82%"></i></div>
+                <div><span data-i18n="problemSolving">分析与解决问题</span><i style="--level:92%"></i></div>
+              </div>
+            </article>
+
+            <article class="card certificates-card">
+              <div class="card-top"><span class="card-label" data-i18n="certificates">证书与认可</span><span>03</span></div>
+              <ul>
+                <li><span><b data-i18n="certificateOne">证书名称一</b><small data-i18n="issuerOne">颁发机构</small></span><time>2025</time></li>
+                <li><span><b data-i18n="certificateTwo">证书名称二</b><small data-i18n="issuerTwo">颁发机构</small></span><time>2024</time></li>
+                <li><span><b data-i18n="award">奖项 / 荣誉</b><small data-i18n="issuerThree">学校或组织</small></span><time>2023</time></li>
+              </ul>
+            </article>
+
+            <article class="card resume-card">
+              <span class="card-label">PDF / CV</span>
+              <h3 data-i18n="resumeCardTitle">需要更完整的信息？</h3>
+              <a href="resume.pdf" download><span data-i18n="downloadFull">下载完整简历</span><b>↓</b></a>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <footer class="workspace-footer">
+        <span>© <b id="year"></b> <span data-i18n="name">你的名字</span></span>
+        <span data-i18n="footerNote">简洁、专注、易于浏览</span>
+        <span data-i18n="tabHint">点击左侧栏目切换内容</span>
+      </footer>
+    </main>
+  </div>
+
+  <dialog class="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <button class="dialog-close" type="button" aria-label="关闭项目详情" data-i18n-aria="dialogCloseLabel">×</button>
+      <span class="dialog-type"></span>
+      <h2 id="dialog-title"></h2>
+      <p class="dialog-summary"></p>
+      <div class="dialog-facts">
+        <div><span data-i18n="dialogRole">我的角色</span><strong class="dialog-role"></strong></div>
+        <div><span data-i18n="dialogOutcome">核心成果</span><strong class="dialog-outcome"></strong></div>
+        <div><span data-i18n="dialogTools">使用工具</span><strong class="dialog-tools"></strong></div>
+      </div>
+      <p class="dialog-note" data-i18n="dialogNote">这里可以继续补充项目链接、截图或完整案例。</p>
+    </div>
+  </dialog>
+
+  <div class="cursor-orb" aria-hidden="true"></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
