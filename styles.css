@@ -50,13 +50,12 @@ button{color:inherit}
 .resume-app{position:relative;z-index:1;width:min(1440px,calc(100% - 32px));height:calc(100dvh - 32px);margin:16px auto;display:grid;grid-template-columns:292px minmax(0,1fr);overflow:hidden;background:var(--app);border:1px solid color-mix(in srgb,var(--line) 80%,transparent);border-radius:28px;box-shadow:0 28px 90px rgba(30,45,65,.12)}
 
 /* Sidebar --------------------------------------------------------------- */
-.profile-sidebar{min-height:0;padding:24px;background:var(--sidebar);color:#f4f7fa;display:flex;flex-direction:column;overflow:hidden}
-.sidebar-brand{height:40px;display:flex;justify-content:space-between;align-items:center}
+.profile-sidebar{position:relative;min-height:0;padding:24px;background:var(--sidebar);color:#f4f7fa;display:flex;flex-direction:column;overflow:hidden}
+.sidebar-brand{position:absolute;top:30px;right:24px;height:auto;display:flex;justify-content:flex-end;align-items:center}
 .sidebar-brand>span{font-size:10px;letter-spacing:.16em;color:var(--sidebar-muted)}
-.monogram{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:var(--blue);color:white;text-decoration:none;font-size:11px;font-weight:800;letter-spacing:-.03em}
-.profile-summary{padding:28px 0 22px;border-bottom:1px solid rgba(255,255,255,.12)}
-.avatar{position:relative;width:82px;height:82px;margin-bottom:20px;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(255,255,255,.17);border-radius:24px;background:linear-gradient(145deg,#34507a,#1a2d45)}
-.avatar::before{content:"";position:absolute;width:95px;height:95px;border:1px solid rgba(255,255,255,.14);border-radius:50%}
+.profile-summary{padding:7px 0 20px;border-bottom:1px solid rgba(255,255,255,.12)}
+.avatar{position:relative;width:110px;height:110px;margin-bottom:18px;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(255,255,255,.17);border-radius:24px;background:linear-gradient(145deg,#34507a,#1a2d45)}
+.avatar::before{content:"";position:absolute;width:124px;height:124px;border:1px solid rgba(255,255,255,.14);border-radius:50%}
 .avatar span{position:relative;z-index:2;font-size:28px;font-weight:700;letter-spacing:-.08em}
 .availability{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--sidebar-muted)}
 .availability i{width:6px;height:6px;border-radius:50%;background:#73df87;box-shadow:0 0 0 4px rgba(115,223,135,.12)}
@@ -156,7 +155,7 @@ button{color:inherit}
 @media(max-width:800px){
   .resume-app{width:calc(100% - 16px);height:calc(100dvh - 16px);margin:8px;display:block;border-radius:22px}
   .profile-sidebar{height:112px;padding:12px 14px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:35px 45px;gap:8px 14px;overflow:visible}
-  .sidebar-brand{height:35px;grid-column:1/-1}.monogram{width:34px;height:34px}.profile-summary,.sidebar-contact{display:none}
+  .sidebar-brand{position:static;height:35px;grid-column:1/-1}.profile-summary,.sidebar-contact{display:none}
   .section-nav{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin:0}.nav-tab{height:42px;min-width:0;display:flex;justify-content:center;padding:0 2px;text-align:center}.nav-tab>span,.nav-tab>i{display:none}.nav-tab>b{font-size:clamp(8px,1.3vw,10px);white-space:nowrap}.nav-tab.is-active::before{left:50%;top:auto;bottom:2px;width:17px;height:2px;transform:translateX(-50%)}
   .workspace{height:calc(100% - 112px);padding:0 16px;grid-template-rows:54px minmax(0,1fr)}.workspace-footer{display:none}.panel-stage{padding:14px 0}.panel-heading{min-height:80px}.panel-heading h1{font-size:clamp(31px,6vw,44px)}
 }
