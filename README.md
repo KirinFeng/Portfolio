@@ -18,7 +18,7 @@ The résumé is presented as a compact application-style interface rather than a
 4. Experience
 5. Credentials
 
-The interface includes English/Chinese localization, light and dark themes, URL hash navigation, project dialogs, expandable experience entries, selectable skill chips, animated counters, pointer-responsive cards, and mobile layouts.
+The interface includes English/Chinese localization, light and dark themes, URL hash navigation, project dialogs, expandable experience entries, selectable skill chips, animated counters, pointer-responsive cards, interactive side star fields, and mobile layouts.
 
 ### Technology
 
@@ -65,7 +65,7 @@ Defines the complete document structure and fallback content.
 - Defines one featured and two compact Projects.
 - Defines selectable Skills, proficiency bars, programming-language bars, and the résumé card.
 - Defines the Credentials list.
-- Provides the native project `<dialog>`, toast notification, and decorative cursor.
+- Provides the native project `<dialog>` and toast notification.
 - Uses `data-i18n` for plain translated text, `data-i18n-html` for trusted translated markup, and `data-i18n-aria` for translated accessible labels.
 - Uses `data-tab`, `data-panel`, `data-project`, `data-count`, and `data-suffix` as JavaScript hooks.
 
@@ -79,7 +79,7 @@ Controls the visual system, layout, responsive behavior, and animation layer.
 - Uses a 12-column, two-row card grid for the main panels.
 - Assigns panel-specific card spans and internal layouts.
 - Keeps the About headline on one line with responsive sizing.
-- Styles navigation state, language/theme controls, footer, dialog, toast, and custom cursor.
+- Styles navigation state, language/theme controls, footer, dialog, toast, and pointer-responsive card lighting.
 - Uses JavaScript-updated variables `--px`, `--py`, `--rx`, and `--ry` for card lighting and 3D tilt.
 - Animates panel entry, progress bars, and dialog appearance.
 - Provides visible keyboard focus states.
@@ -111,7 +111,8 @@ Core behaviors:
 - Skill buttons toggle `.is-selected` and `aria-pressed`; the localized selected count updates immediately.
 - Project buttons load localized data and open the native modal with `showModal()`. The close button and backdrop can dismiss it.
 - Elements with `data-count` animate for 750 ms; reduced-motion users receive the final value immediately.
-- Fine-pointer devices receive card tilt, lighting, internal parallax, and a custom cursor using `requestAnimationFrame`.
+- Fine-pointer devices receive card tilt, lighting, and internal parallax using `requestAnimationFrame`.
+- Wide viewports render twinkling stars in the side gutters; nearby stars repel from the pointer and spring back to their anchors.
 - Placeholder `#` links are prevented from navigating.
 - PDF links opened through `file:` display a localized reminder toast. Test actual downloads over HTTP.
 - Initialization restores saved preferences, otherwise uses English and the operating-system color preference; it also reads the URL hash and inserts the current year.

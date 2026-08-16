@@ -104,7 +104,7 @@ const translations = {
     portraitLabel: 'Portrait placeholder',
     available: 'Open to new opportunities',
     name: 'Kirin',
-    role: 'Cybersecurity Analyst & Web Designer',
+    role: 'Cybersecurity & Information Technology',
     navLabel: 'Résumé sections',
     navAbout: 'About',
     navExperience: 'Experience',
@@ -213,7 +213,6 @@ const panels = [...document.querySelectorAll('[data-panel]')];
 const themeButton = document.querySelector('.theme-toggle');
 const projectDialog = document.querySelector('.project-dialog');
 const toast = document.querySelector('.toast');
-const cursorOrb = document.querySelector('.cursor-orb');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 
@@ -411,28 +410,110 @@ cards.forEach(card => {
       if (visual) visual.style.translate = `${(x - .5) * 7}px ${(y - .5) * 7}px`;
     });
   });
-  card.addEventListener('pointerenter', () => cursorOrb.classList.add('is-card'));
   card.addEventListener('pointerleave', () => {
     card.style.setProperty('--rx', '0deg');
     card.style.setProperty('--ry', '0deg');
     const visual = card.querySelector('.mini-ui, .statement-visual, .compact-mark');
     if (visual) visual.style.translate = '0 0';
-    cursorOrb.classList.remove('is-card');
   });
 });
 
-if (finePointer.matches && !reducedMotion.matches) {
-  let cursorFrame = 0;
-  document.addEventListener('pointermove', event => {
-    cancelAnimationFrame(cursorFrame);
-    cursorFrame = requestAnimationFrame(() => {
-      cursorOrb.style.left = `${event.clientX}px`;
-      cursorOrb.style.top = `${event.clientY}px`;
-      cursorOrb.classList.add('is-visible');
-    });
+const starCanvas = document.querySelector('.star-field');
+const starContext = starCanvas.getContext('2d');
+const starPointer = { x:-1000, y:-1000 };
+let stars = [];
+let starAnimationFrame = 0;
+
+function buildStarField() {
+  cancelAnimationFrame(starAnimationFrame);
+  const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const appBounds = document.querySelector('.resume-app').getBoundingClientRect();
+  const sideWidth = Math.max(0, appBounds.left - 12);
+
+  starCanvas.width = Math.round(width * pixelRatio);
+  starCanvas.height = Math.round(height * pixelRatio);
+  starCanvas.style.width = `${width}px`;
+  starCanvas.style.height = `${height}px`;
+  starContext.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+  const starCount = sideWidth > 24 ? Math.min(90, Math.max(24, Math.round(sideWidth * height / 9000))) : 0;
+  stars = Array.from({ length:starCount }, (_, index) => {
+    const onLeft = index % 2 === 0;
+    const anchorX = onLeft
+      ? 10 + Math.random() * Math.max(1, sideWidth - 20)
+      : width - sideWidth + 10 + Math.random() * Math.max(1, sideWidth - 20);
+    const anchorY = 10 + Math.random() * Math.max(1, height - 20);
+    return {
+      x:anchorX,
+      y:anchorY,
+      anchorX,
+      anchorY,
+      velocityX:0,
+      velocityY:0,
+      radius:.7 + Math.random() * 1.5,
+      phase:Math.random() * Math.PI * 2,
+      speed:.0012 + Math.random() * .0022
+    };
   });
-  document.documentElement.addEventListener('mouseleave', () => cursorOrb.classList.remove('is-visible'));
+
+  drawStarField(performance.now());
 }
+
+function drawStarField(now) {
+  starContext.clearRect(0, 0, window.innerWidth, window.innerHeight);
+  const starRgb = root.classList.contains('dark') ? '164,184,255' : '60,91,205';
+
+  stars.forEach(star => {
+    if (!reducedMotion.matches) {
+      const deltaX = star.x - starPointer.x;
+      const deltaY = star.y - starPointer.y;
+      const distance = Math.hypot(deltaX, deltaY);
+      if (distance < 92 && distance > 0) {
+        const force = (1 - distance / 92) * 1.15;
+        star.velocityX += deltaX / distance * force;
+        star.velocityY += deltaY / distance * force;
+      }
+      star.velocityX += (star.anchorX - star.x) * .018;
+      star.velocityY += (star.anchorY - star.y) * .018;
+      star.velocityX *= .91;
+      star.velocityY *= .91;
+      star.x += star.velocityX;
+      star.y += star.velocityY;
+    }
+
+    const shimmer = reducedMotion.matches ? .48 : .32 + (Math.sin(now * star.speed + star.phase) + 1) * .25;
+    const ray = star.radius * 3.2;
+    starContext.beginPath();
+    starContext.fillStyle = `rgba(${starRgb},${shimmer})`;
+    starContext.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    starContext.fill();
+    starContext.beginPath();
+    starContext.strokeStyle = `rgba(${starRgb},${shimmer * .55})`;
+    starContext.lineWidth = .7;
+    starContext.moveTo(star.x - ray, star.y);
+    starContext.lineTo(star.x + ray, star.y);
+    starContext.moveTo(star.x, star.y - ray);
+    starContext.lineTo(star.x, star.y + ray);
+    starContext.stroke();
+  });
+
+  if (!reducedMotion.matches && stars.length) starAnimationFrame = requestAnimationFrame(drawStarField);
+}
+
+if (finePointer.matches) {
+  document.addEventListener('pointermove', event => {
+    starPointer.x = event.clientX;
+    starPointer.y = event.clientY;
+  });
+  document.documentElement.addEventListener('mouseleave', () => {
+    starPointer.x = -1000;
+    starPointer.y = -1000;
+  });
+}
+window.addEventListener('resize', buildStarField);
+buildStarField();
 
 document.querySelectorAll('a[href="#"]').forEach(link => link.addEventListener('click', event => event.preventDefault()));
 document.querySelectorAll('a[download]').forEach(link => link.addEventListener('click', event => {
