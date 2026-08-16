@@ -36,10 +36,6 @@
 3. 打开 **Settings → Pages**，选择 **Deploy from a branch**、`main` 和 `/root`。
 4. 保存并等待几分钟，GitHub 会显示公开网址。
 
-### Netlify
-
-登录 Netlify 后选择手动部署，把整个网站文件夹拖入上传区域即可获得公开网址。
-
 ## 文件说明
 
 - `index.html`：页面结构与个人信息
