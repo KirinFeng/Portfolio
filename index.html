@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,8 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="你的名字｜个人简历">
   <meta property="og:description" content="双语个人简历、精选项目与工作经历">
-  <title>你的名字｜个人简历</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Kirin | Résumé & Portfolio</title>
+  <link rel="icon" href="img/icon-title-out.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
@@ -21,42 +21,47 @@
   <div class="resume-app">
     <aside class="profile-sidebar" aria-label="个人信息与页面导航" data-i18n-aria="sidebarLabel">
       <div class="sidebar-brand">
-        <a href="#about" class="monogram" aria-label="返回关于页面" data-i18n-aria="homeLabel">YN</a>
+        <a href="#about" class="monogram" aria-label="返回关于页面" data-i18n-aria="homeLabel"><img src="img/icon-title-in.png" alt="Kirin" style="width:100%;height:100%;object-fit:contain;"></a>
         <span>PORTFOLIO / 2026</span>
       </div>
 
       <section class="profile-summary">
         <div class="avatar" aria-label="头像占位" data-i18n-aria="portraitLabel">
-          <span>YN</span>
+          <img src="img/icon-face.jpg" alt="Kirin" style="width:100%;height:100%;object-fit:cover;border-radius:24px;">
           <i></i>
         </div>
         <div>
           <p class="availability"><i></i><span data-i18n="available">正在寻找新的机会</span></p>
-          <h2 data-i18n="name">你的名字</h2>
-          <p class="profile-role" data-i18n="role">你的职位 / 专业方向</p>
-          <p class="profile-location">Toronto, Canada</p>
+          <h2 data-i18n="name">Kirin</h2>
+          <p class="profile-role" data-i18n="role">Cybersecurity Analyst & Web Designer</p>
+          <p class="profile-location" data-i18n="locationValue">Vancouver, Canada</p>
         </div>
       </section>
 
       <nav class="section-nav" aria-label="简历栏目" data-i18n-aria="navLabel" role="tablist">
         <button class="nav-tab is-active" type="button" role="tab" id="tab-about" aria-selected="true" aria-controls="about" data-tab="about">
-          <span>01</span><b data-i18n="navAbout">关于</b><i>↗</i>
-        </button>
-        <button class="nav-tab" type="button" role="tab" id="tab-experience" aria-selected="false" aria-controls="experience" data-tab="experience">
-          <span>02</span><b data-i18n="navExperience">经历</b><i>↗</i>
-        </button>
-        <button class="nav-tab" type="button" role="tab" id="tab-projects" aria-selected="false" aria-controls="projects" data-tab="projects">
-          <span>03</span><b data-i18n="navProjects">项目</b><i>↗</i>
+          <span>01</span><b data-i18n="navAbout">About</b><i>↗</i>
         </button>
         <button class="nav-tab" type="button" role="tab" id="tab-skills" aria-selected="false" aria-controls="skills" data-tab="skills">
-          <span>04</span><b data-i18n="navSkills">技能与证书</b><i>↗</i>
+          <span>02</span><b data-i18n="navSkills">Skills</b><i>↗</i>
+        </button>
+        <button class="nav-tab" type="button" role="tab" id="tab-projects" aria-selected="false" aria-controls="projects" data-tab="projects">
+          <span>03</span><b data-i18n="navProjects">Projects</b><i>↗</i>
+        </button>
+        <button class="nav-tab" type="button" role="tab" id="tab-experience" aria-selected="false" aria-controls="experience" data-tab="experience">
+          <span>04</span><b data-i18n="navExperience">Experience</b><i>↗</i>
+        </button>
+        <button class="nav-tab" type="button" role="tab" id="tab-credentials" aria-selected="false" aria-controls="credentials" data-tab="credentials">
+          <span>05</span><b data-i18n="navCredentials">Credentials</b><i>↗</i>
         </button>
       </nav>
 
       <div class="sidebar-contact">
-        <div class="contact-row">
-          <span data-i18n="emailLabel">邮箱</span>
-          <a href="mailto:you@example.com">you@example.com</a>
+        <div class="contact-row">          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+          <a href="tel:7789668194">778-966-8194</a>
+        </div>
+        <div class="contact-row">          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
+          <a href="mailto:fengyuanqi@gmail.com">fengyuanqi@gmail.com</a>
         </div>
         <div class="social-row">
           <a href="#" aria-label="LinkedIn">LinkedIn ↗</a>
@@ -73,13 +78,13 @@
         <div class="page-indicator" aria-live="polite">
           <span data-current-index>01</span>
           <i></i>
-          <span>04</span>
-          <b data-current-label data-i18n="navAbout">关于</b>
+          <span>05</span>
+          <b data-current-label data-i18n="navAbout">About</b>
         </div>
         <div class="header-actions">
           <div class="language-switch" role="group" aria-label="语言切换" data-i18n-aria="languageLabel">
-            <button type="button" class="language-option is-active" data-lang="zh" aria-pressed="true">中</button>
-            <button type="button" class="language-option" data-lang="en" aria-pressed="false">EN</button>
+            <button type="button" class="language-option is-active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="language-option" data-lang="zh" aria-pressed="false">中</button>
           </div>
           <button class="theme-toggle" type="button" aria-label="切换深浅色" data-i18n-aria="themeLabel">
             <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
@@ -91,44 +96,43 @@
       <div class="panel-stage" id="panel-stage">
         <section class="tab-panel is-active" id="about" role="tabpanel" aria-labelledby="tab-about" data-panel="about">
           <div class="panel-heading">
-            <div><span>01 /</span><p data-i18n="aboutEyebrow">个人概览</p></div>
-            <h1 data-i18n-html="aboutTitle">少一点篇幅，<br><em>多一点重点。</em></h1>
+            <h1 data-i18n="aboutTitle">Get to know me better</h1>
           </div>
           <div class="panel-grid about-grid">
             <article class="card intro-card">
-              <span class="card-label" data-i18n="hello">你好，我是</span>
-              <h3><span data-i18n="name">你的名字</span><em>.</em></h3>
-              <p data-i18n-html="intro">一名专注于 <strong>你的专业方向</strong> 的实践者。我擅长把复杂问题梳理清楚，并交付简洁、可靠、真正有用的结果。</p>
+              <span class="card-label" data-i18n="hello">Hello, I'm</span>
+              <h3><span data-i18n="name">Kirin</span><em>.</em></h3>
+              <p data-i18n-html="intro">A security-focused professional passionate about <strong>Cybersecurity and Information Technology</strong>. I excel at identifying vulnerabilities, designing secure solutions, and delivering reliable systems that protect what matters most.</p>
               <div class="fact-list">
-                <div><span data-i18n="locationLabel">所在地</span><b>Toronto, Canada</b></div>
-                <div><span data-i18n="focusLabel">方向</span><b data-i18n="focusValue">你的专业方向</b></div>
-                <div><span data-i18n="languagesLabel">语言</span><b data-i18n="languageValue">中文 · English</b></div>
+                <div><span data-i18n="locationLabel">Based in</span><b data-i18n="locationValue">Vancouver, Canada</b></div>
+                <div><span data-i18n="focusLabel">Focus</span><b data-i18n="focusValue">Cybersecurity, Information Technology</b></div>
+                <div><span data-i18n="languagesLabel">Languages</span><b data-i18n="languageValue">English · Chinese</b></div>
               </div>
             </article>
 
             <article class="card statement-card">
-              <span class="card-label">NOW / 2026</span>
-              <div class="statement-visual" aria-hidden="true"><span>YN</span><i></i><i></i></div>
-              <p data-i18n="statement">保持好奇，持续创造。</p>
+              <span class="card-label" data-i18n="nowLabel">NOW / 2026</span>
+              <div class="statement-visual" aria-hidden="true"><span>KA</span><i></i><i></i></div>
+              <p data-i18n="statement">Stay curious, keep learning.</p>
             </article>
 
             <article class="card metric-card metric-blue">
               <span>01</span>
               <strong data-count="3" data-suffix="+">0+</strong>
-              <p data-i18n="yearsMetric">年专业经验</p>
+              <p data-i18n="yearsMetric">Years of experience</p>
             </article>
             <article class="card metric-card">
               <span>02</span>
               <strong data-count="8">0</strong>
-              <p data-i18n="projectsMetric">个精选项目</p>
+              <p data-i18n="projectsMetric">Featured projects</p>
             </article>
           </div>
         </section>
 
         <section class="tab-panel" id="experience" role="tabpanel" aria-labelledby="tab-experience" data-panel="experience" hidden>
           <div class="panel-heading">
-            <div><span>02 /</span><p data-i18n="experienceEyebrow">经历与教育</p></div>
-            <h1 data-i18n-html="experienceTitle">经历不必很长，<br><em>成果需要清楚。</em></h1>
+            <div><span>04 /</span><p data-i18n="experienceEyebrow">Experience & Education</p></div>
+            <h1 data-i18n-html="experienceTitle">Work Experience & Education</h1>
           </div>
           <div class="panel-grid experience-grid">
             <article class="card timeline-card">
@@ -164,8 +168,8 @@
 
         <section class="tab-panel" id="projects" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" hidden>
           <div class="panel-heading">
-            <div><span>03 /</span><p data-i18n="projectsEyebrow">精选项目</p></div>
-            <h1 data-i18n-html="projectsTitle">项目不用很多，<br><em>留下代表作。</em></h1>
+            <div><span>03 /</span><p data-i18n="projectsEyebrow">Projects</p></div>
+            <h1 data-i18n-html="projectsTitle">Featured Projects</h1>
           </div>
           <div class="panel-grid projects-grid">
             <article class="card project-card project-featured">
@@ -200,8 +204,8 @@
 
         <section class="tab-panel" id="skills" role="tabpanel" aria-labelledby="tab-skills" data-panel="skills" hidden>
           <div class="panel-heading">
-            <div><span>04 /</span><p data-i18n="skillsEyebrow">技能与证书</p></div>
-            <h1 data-i18n-html="skillsTitle">让能力结构，<br><em>一眼就能看懂。</em></h1>
+            <div><span>02 /</span><p data-i18n="skillsEyebrow">Skills</p></div>
+            <h1 data-i18n-html="skillsTitle">Your Skills & Expertise</h1>
           </div>
           <div class="panel-grid skills-grid">
             <article class="card skills-card">
@@ -216,27 +220,56 @@
               </div>
             </article>
 
-            <article class="card certificates-card">
-              <div class="card-top"><span class="card-label" data-i18n="certificates">证书与认可</span><span>03</span></div>
-              <ul>
-                <li><span><b data-i18n="certificateOne">证书名称一</b><small data-i18n="issuerOne">颁发机构</small></span><time>2025</time></li>
-                <li><span><b data-i18n="certificateTwo">证书名称二</b><small data-i18n="issuerTwo">颁发机构</small></span><time>2024</time></li>
-                <li><span><b data-i18n="award">奖项 / 荣誉</b><small data-i18n="issuerThree">学校或组织</small></span><time>2023</time></li>
-              </ul>
+            <article class="card programming-languages-card">
+              <div class="card-top"><span class="card-label" data-i18n="programmingLanguages">Programming Languages</span><span>03</span></div>
+              <div class="language-list">
+                <div class="language-item">
+                  <span>Python</span>
+                  <div class="language-bar"><i style="--progress:90%"></i></div>
+                </div>
+                <div class="language-item">
+                  <span>JavaScript</span>
+                  <div class="language-bar"><i style="--progress:85%"></i></div>
+                </div>
+                <div class="language-item">
+                  <span>SQL</span>
+                  <div class="language-bar"><i style="--progress:88%"></i></div>
+                </div>
+                <div class="language-item">
+                  <span>HTML/CSS</span>
+                  <div class="language-bar"><i style="--progress:92%"></i></div>
+                </div>
+              </div>
             </article>
 
-            <article class="card resume-card">
+            <article class="card resume-card resume-card-compact">
               <span class="card-label">PDF / CV</span>
               <h3 data-i18n="resumeCardTitle">需要更完整的信息？</h3>
               <a href="resume.pdf" download><span data-i18n="downloadFull">下载完整简历</span><b>↓</b></a>
             </article>
           </div>
         </section>
+
+        <section class="tab-panel" id="credentials" role="tabpanel" aria-labelledby="tab-credentials" data-panel="credentials" hidden>
+          <div class="panel-heading">
+            <div><span>05 /</span><p data-i18n="credentialsEyebrow">Credentials</p></div>
+            <h1 data-i18n="credentialsTitle">Credentials & Recognition</h1>
+          </div>
+          <div class="panel-grid">
+            <article class="card certificates-card">
+              <div class="card-top"><span class="card-label" data-i18n="certificates">Certifications</span><span>03</span></div>
+              <ul>
+                <li><span><b data-i18n="certificateOne">Certification Name One</b><small data-i18n="issuerOne">Issuing Organization</small></span><time>2025</time></li>
+                <li><span><b data-i18n="certificateTwo">Certification Name Two</b><small data-i18n="issuerTwo">Issuing Organization</small></span><time>2024</time></li>
+                <li><span><b data-i18n="award">Award / Recognition</b><small data-i18n="issuerThree">School or Organization</small></span><time>2023</time></li>
+              </ul>
+            </article>
+          </div>
+        </section>
       </div>
 
       <footer class="workspace-footer">
-        <span>© <b id="year"></b> <span data-i18n="name">你的名字</span></span>
-        <span data-i18n="footerNote">简洁、专注、易于浏览</span>
+        <span>© <b id="year"></b> <span>Created By Kirin</span></span>
         <span data-i18n="tabHint">点击左侧栏目切换内容</span>
       </footer>
     </main>

@@ -1,34 +1,37 @@
 const translations = {
   zh: {
-    title: '你的名字｜个人简历',
+    title: '冯元麒｜个人简历',
     description: '你的名字的双语个人简历、精选项目与工作经历',
     skip: '跳到主要内容',
     sidebarLabel: '个人信息与页面导航',
     homeLabel: '返回关于页面',
     portraitLabel: '头像占位',
     available: '正在寻找新的机会',
-    name: '你的名字',
-    role: '你的职位 / 专业方向',
+    name: '冯元麒',
+    role: '信息技术 / 网络安全',
     navLabel: '简历栏目',
     navAbout: '关于',
     navExperience: '经历',
     navProjects: '项目',
     navSkills: '技能与证书',
+    navCredentials: '资质认证',
     emailLabel: '邮箱',
     downloadResume: '下载 PDF 简历',
     languageLabel: '语言切换',
     themeLabel: '切换深浅色',
     aboutEyebrow: '个人概览',
-    aboutTitle: '少一点篇幅，<br><em>多一点重点。</em>',
+    aboutTitle: '进一步了解我',
     hello: '你好，我是',
-    intro: '一名专注于 <strong>你的专业方向</strong> 的实践者。我擅长把复杂问题梳理清楚，并交付简洁、可靠、真正有用的结果。',
+    intro: '一名专注于<strong>网络安全与信息技术</strong>的专业人士。我擅长识别漏洞、设计安全解决方案，并交付可靠的系统，保护真正重要的事物。',
     locationLabel: '所在地',
+    locationValue: '加拿大温哥华',
     focusLabel: '方向',
     focusValue: '你的专业方向',
     languagesLabel: '语言',
     languageValue: '中文 · English',
-    statement: '保持好奇，持续创造。',
-    yearsMetric: '年专业经验',
+    nowLabel: '现在 / 2026',
+    statement: '保持好奇，持续学习。',
+    yearsMetric: '年工作经验',
     projectsMetric: '个精选项目',
     experienceEyebrow: '经历与教育',
     experienceTitle: '经历不必很长，<br><em>成果需要清楚。</em>',
@@ -60,6 +63,7 @@ const translations = {
     projectThreeLabel: '查看项目三',
     skillsEyebrow: '技能与证书',
     skillsTitle: '让能力结构，<br><em>一眼就能看懂。</em>',
+    programmingLanguages: '编程语言',
     coreSkills: '核心技能',
     skillHint: '点击标签点亮',
     skillSelected: '已点亮 {count} 项',
@@ -72,6 +76,8 @@ const translations = {
     communication: '沟通与协作',
     problemSolving: '分析与解决问题',
     certificates: '证书与认可',
+    credentialsEyebrow: '资质与认可',
+    credentialsTitle: '资质认证与专业认可',
     certificateOne: '证书名称一',
     certificateTwo: '证书名称二',
     award: '奖项 / 荣誉',
@@ -90,36 +96,39 @@ const translations = {
     resumeMissing: '请先把 PDF 简历命名为 resume.pdf 并放入网站文件夹。'
   },
   en: {
-    title: 'Your Name | Résumé & Portfolio',
-    description: 'Bilingual résumé, selected projects and experience of Your Name',
+    title: 'Kirin | Résumé & Portfolio',
+    description: 'Bilingual résumé, selected projects and experience of Kirin',
     skip: 'Skip to main content',
     sidebarLabel: 'Profile information and page navigation',
     homeLabel: 'Back to the about panel',
     portraitLabel: 'Portrait placeholder',
     available: 'Open to new opportunities',
-    name: 'Your Name',
-    role: 'Your Role / Professional Focus',
+    name: 'Kirin',
+    role: 'Cybersecurity Analyst & Web Designer',
     navLabel: 'Résumé sections',
     navAbout: 'About',
     navExperience: 'Experience',
     navProjects: 'Projects',
-    navSkills: 'Skills & Credentials',
+    navSkills: 'Skills',
+    navCredentials: 'Credentials',
     emailLabel: 'Email',
     downloadResume: 'Download PDF Résumé',
     languageLabel: 'Change language',
     themeLabel: 'Toggle light and dark theme',
     aboutEyebrow: 'Profile overview',
-    aboutTitle: 'Less length.<br><em>More signal.</em>',
+    aboutTitle: 'Get to know me better',
     hello: "Hello, I'm",
-    intro: 'A practitioner focused on <strong>your professional field</strong>. I clarify complex problems and deliver outcomes that are simple, reliable, and genuinely useful.',
+    intro: 'A security-focused professional passionate about <strong>Cybersecurity and Information Technology</strong>. I excel at identifying vulnerabilities, designing secure solutions, and delivering reliable systems that protect what matters most.',
     locationLabel: 'Based in',
+    locationValue: 'Vancouver, Canada',
     focusLabel: 'Focus',
     focusValue: 'Your professional field',
     languagesLabel: 'Languages',
     languageValue: 'Chinese · English',
-    statement: 'Stay curious. Keep making.',
-    yearsMetric: 'years of experience',
-    projectsMetric: 'selected projects',
+    nowLabel: 'NOW / 2026',
+    statement: 'Stay curious, keep learning.',
+    yearsMetric: 'Years of experience',
+    projectsMetric: 'Featured projects',
     experienceEyebrow: 'Experience & education',
     experienceTitle: 'A short history.<br><em>Clear outcomes.</em>',
     workHistory: 'Work history',
@@ -150,6 +159,7 @@ const translations = {
     projectThreeLabel: 'View project three',
     skillsEyebrow: 'Skills & credentials',
     skillsTitle: 'A skill set you can<br><em>understand at a glance.</em>',
+    programmingLanguages: 'Programming Languages',
     coreSkills: 'Core skills',
     skillHint: 'Select a skill to highlight',
     skillSelected: '{count} skills highlighted',
@@ -162,6 +172,8 @@ const translations = {
     communication: 'Communication',
     problemSolving: 'Problem solving',
     certificates: 'Credentials & recognition',
+    credentialsEyebrow: 'Credentials',
+    credentialsTitle: 'Credentials & Recognition',
     certificateOne: 'Certification Name One',
     certificateTwo: 'Certification Name Two',
     award: 'Award / Recognition',
@@ -205,15 +217,16 @@ const cursorOrb = document.querySelector('.cursor-orb');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 
-let currentLanguage = 'zh';
+let currentLanguage = 'en';
 let currentPanel = 'about';
 let activeProject = null;
 
 const panelMeta = {
   about: { index:'01', label:'navAbout' },
-  experience: { index:'02', label:'navExperience' },
+  skills: { index:'02', label:'navSkills' },
   projects: { index:'03', label:'navProjects' },
-  skills: { index:'04', label:'navSkills' }
+  experience: { index:'04', label:'navExperience' },
+  credentials: { index:'05', label:'navCredentials' }
 };
 
 function updateSkillStatus() {
@@ -299,7 +312,7 @@ function activatePanel(name, updateHistory = true) {
 
 const savedTheme = localStorage.getItem('resume-theme');
 setTheme(savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-setLanguage(localStorage.getItem('resume-language') || 'zh');
+setLanguage(localStorage.getItem('resume-language') || 'en');
 activatePanel(location.hash.slice(1) || 'about', false);
 document.getElementById('year').textContent = new Date().getFullYear();
 
