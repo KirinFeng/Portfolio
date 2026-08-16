@@ -8,7 +8,7 @@ const translations = {
     portraitLabel: '头像占位',
     available: '正在寻找新的机会',
     name: '冯元麒',
-    role: '信息技术 / 网络安全',
+    role: '网络安全 / 信息技术',
     navLabel: '简历栏目',
     navAbout: '关于',
     navExperience: '经历',
