@@ -77,10 +77,8 @@
     <main class="workspace">
       <header class="workspace-header">
         <div class="page-indicator" aria-live="polite">
-          <span data-current-index>01</span>
-          <i></i>
-          <span>05</span>
-          <b data-current-label data-i18n="navAbout">About</b>
+          <span><b data-current-index>01</b> /</span>
+          <strong data-current-label data-i18n="aboutEyebrow">Profile overview</strong>
         </div>
         <div class="header-actions">
           <div class="language-switch" role="group" aria-label="语言切换" data-i18n-aria="languageLabel">
@@ -97,7 +95,6 @@
       <div class="panel-stage" id="panel-stage">
         <section class="tab-panel is-active" id="about" role="tabpanel" aria-labelledby="tab-about" data-panel="about">
           <div class="panel-heading">
-            <div><span>01 /</span><p data-i18n="aboutEyebrow">Profile overview</p></div>
             <h1 data-i18n-html="aboutTitle">Get to know me.<br><em>Beyond the résumé.</em></h1>
           </div>
           <div class="panel-grid about-grid">
@@ -133,7 +130,6 @@
 
         <section class="tab-panel" id="experience" role="tabpanel" aria-labelledby="tab-experience" data-panel="experience" hidden>
           <div class="panel-heading">
-            <div><span>04 /</span><p data-i18n="experienceEyebrow">Experience & Education</p></div>
             <h1 data-i18n-html="experienceTitle">Work Experience & Education</h1>
           </div>
           <div class="panel-grid experience-grid">
@@ -170,7 +166,6 @@
 
         <section class="tab-panel" id="projects" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" hidden>
           <div class="panel-heading">
-            <div><span>03 /</span><p data-i18n="projectsEyebrow">Projects</p></div>
             <h1 data-i18n-html="projectsTitle">Featured Projects</h1>
           </div>
           <div class="panel-grid projects-grid">
@@ -206,7 +201,6 @@
 
         <section class="tab-panel" id="skills" role="tabpanel" aria-labelledby="tab-skills" data-panel="skills" hidden>
           <div class="panel-heading">
-            <div><span>02 /</span><p data-i18n="skillsEyebrow">Skills</p></div>
             <h1 data-i18n-html="skillsTitle">Your Skills & Expertise</h1>
           </div>
           <div class="panel-grid skills-grid">
@@ -254,15 +248,19 @@
 
         <section class="tab-panel" id="credentials" role="tabpanel" aria-labelledby="tab-credentials" data-panel="credentials" hidden>
           <div class="panel-heading">
-            <div><span>05 /</span><p data-i18n="credentialsEyebrow">Credentials</p></div>
-            <h1 data-i18n="credentialsTitle">Credentials & Recognition</h1>
+            <h1 data-i18n-html="credentialsTitle">Proof of progress.<br><em>Recognition that matters.</em></h1>
           </div>
           <div class="panel-grid">
             <article class="card certificates-card">
-              <div class="card-top"><span class="card-label" data-i18n="certificates">Certifications</span><span>03</span></div>
+              <div class="card-top"><span class="card-label" data-i18n="certificates">Credentials</span><span>02</span></div>
               <ul>
                 <li><span><b data-i18n="certificateOne">Certification Name One</b><small data-i18n="issuerOne">Issuing Organization</small></span><time>2025</time></li>
                 <li><span><b data-i18n="certificateTwo">Certification Name Two</b><small data-i18n="issuerTwo">Issuing Organization</small></span><time>2024</time></li>
+              </ul>
+            </article>
+            <article class="card certificates-card recognition-card">
+              <div class="card-top"><span class="card-label" data-i18n="recognition">Recognition</span><span>01</span></div>
+              <ul>
                 <li><span><b data-i18n="award">Award / Recognition</b><small data-i18n="issuerThree">School or Organization</small></span><time>2023</time></li>
               </ul>
             </article>

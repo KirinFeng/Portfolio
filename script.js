@@ -75,9 +75,10 @@ const translations = {
     technical: '技术与工具',
     communication: '沟通与协作',
     problemSolving: '分析与解决问题',
-    certificates: '证书与认可',
+    certificates: '资质证书',
+    recognition: '专业认可',
     credentialsEyebrow: '资质与认可',
-    credentialsTitle: '资质认证与专业认可',
+    credentialsTitle: '成长的证明。<br><em>值得珍视的认可。</em>',
     certificateOne: '证书名称一',
     certificateTwo: '证书名称二',
     award: '奖项 / 荣誉',
@@ -171,9 +172,10 @@ const translations = {
     technical: 'Technical & tools',
     communication: 'Communication',
     problemSolving: 'Problem solving',
-    certificates: 'Credentials & recognition',
-    credentialsEyebrow: 'Credentials',
-    credentialsTitle: 'Credentials & Recognition',
+    certificates: 'Credentials',
+    recognition: 'Recognition',
+    credentialsEyebrow: 'Credentials & Recognition',
+    credentialsTitle: 'Proof of progress.<br><em>Recognition that matters.</em>',
     certificateOne: 'Certification Name One',
     certificateTwo: 'Certification Name Two',
     award: 'Award / Recognition',
@@ -221,11 +223,11 @@ let currentPanel = 'about';
 let activeProject = null;
 
 const panelMeta = {
-  about: { index:'01', label:'navAbout' },
-  skills: { index:'02', label:'navSkills' },
-  projects: { index:'03', label:'navProjects' },
-  experience: { index:'04', label:'navExperience' },
-  credentials: { index:'05', label:'navCredentials' }
+  about: { index:'01', label:'aboutEyebrow' },
+  skills: { index:'02', label:'skillsEyebrow' },
+  projects: { index:'03', label:'projectsEyebrow' },
+  experience: { index:'04', label:'experienceEyebrow' },
+  credentials: { index:'05', label:'credentialsEyebrow' }
 };
 
 function updateSkillStatus() {
