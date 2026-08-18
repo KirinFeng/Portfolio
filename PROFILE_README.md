@@ -42,4 +42,3 @@ I combine a software-development foundation with hands-on experience in **applic
 
 ---
 
-<sub>Open to graduate and early-career opportunities in Security Analysis, Application Security, and Security Engineering.</sub>
