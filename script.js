@@ -19,7 +19,7 @@ const translations = {
     downloadResume: '下载 PDF 简历',
     languageLabel: '语言切换',
     themeLabel: '切换深浅色',
-    aboutEyebrow: '个人概览',
+    aboutEyebrow: 'cat ~/profile.md',
     aboutTitle: '进一步了解我。<br><em>不止于简历。</em>',
     hello: '你好，我是',
     intro: '网络安全硕士毕业生，具备<strong>应用安全、数字取证、威胁建模与安全软件开发</strong>实践经验。能够分析攻击面、识别安全差距，并将技术发现转化为可执行的修复建议。',
@@ -33,7 +33,7 @@ const translations = {
     statement: '保持好奇，持续学习。',
     yearsMetric: '段专业经历',
     projectsMetric: '项简历项目',
-    experienceEyebrow: '经历与教育',
+    experienceEyebrow: 'git log --oneline --graph experience',
     experienceTitle: '经历不必很长，<br><em>成果需要清楚。</em>',
     workHistory: '工作经历',
     timeOne: '2023.01 — 2023.08',
@@ -51,7 +51,7 @@ const translations = {
     schoolTwo: 'Kwantlen Polytechnic University · Surrey',
     currentFocus: '当前关注',
     focusText: '面向 Security Analyst、Application Security 与 Junior Security Engineer 岗位，持续深化威胁建模、Web 安全测试和数字取证能力。',
-    projectsEyebrow: '项目作品集',
+    projectsEyebrow: 'ls -la ~/projects/',
     projectsTitle: '从安全研究到工程实践，<br><em>完整呈现。</em>',
     projectGroupSecurity: '网络安全与技术项目',
     projectGroupEngineering: '其他工程项目',
@@ -59,7 +59,7 @@ const translations = {
     projectCategoryEngineering: '工程',
     projectCount: '{count} 个项目',
     viewProject: '查看案例',
-    skillsEyebrow: '技能与证书',
+    skillsEyebrow: 'nmap -sV skills.host',
     skillsTitle: '让能力结构，<br><em>一眼就能看懂。</em>',
     programmingLanguages: '编程语言',
     coreSkills: '核心技能',
@@ -75,7 +75,7 @@ const translations = {
     problemSolving: '分析与解决问题',
     certificates: '资质证书',
     recognition: '专业认可',
-    credentialsEyebrow: '资质与认可',
+    credentialsEyebrow: 'openssl verify ~/certs.pem',
     credentialsTitle: '成长的证明。<br><em>值得珍视的认可。</em>',
     certificateOne: 'CCNA：网络简介（ITN）',
     certificateTwo: '',
@@ -114,7 +114,7 @@ const translations = {
     downloadResume: 'Download PDF Résumé',
     languageLabel: 'Change language',
     themeLabel: 'Toggle light and dark theme',
-    aboutEyebrow: 'Profile overview',
+    aboutEyebrow: 'cat ~/profile.md',
     aboutTitle: 'Get to know me.<br><em>Beyond the résumé.</em>',
     hello: "Hello, I'm",
     intro: 'Cybersecurity graduate with hands-on experience in <strong>application security, digital forensics, threat modeling, and secure software development</strong>. Skilled at analyzing attack surfaces, identifying security gaps, and translating technical findings into practical remediation recommendations.',
@@ -128,7 +128,7 @@ const translations = {
     statement: 'Stay curious, keep learning.',
     yearsMetric: 'Professional roles',
     projectsMetric: 'Documented projects',
-    experienceEyebrow: 'Experience & education',
+    experienceEyebrow: 'git log --oneline --graph experience',
     experienceTitle: 'A short history.<br><em>Clear outcomes.</em>',
     workHistory: 'Work history',
     timeOne: 'Jan 2023 — Aug 2023',
@@ -146,7 +146,7 @@ const translations = {
     schoolTwo: 'Kwantlen Polytechnic University · Surrey',
     currentFocus: 'Current focus',
     focusText: 'Targeting Security Analyst, Application Security, and Junior Security Engineer roles while deepening threat-modeling, web-testing, and digital-forensics capabilities.',
-    projectsEyebrow: 'Project portfolio',
+    projectsEyebrow: 'ls -la ~/projects/',
     projectsTitle: 'From security research to engineering,<br><em>the complete portfolio.</em>',
     projectGroupSecurity: 'Cybersecurity & Technical Projects',
     projectGroupEngineering: 'Additional Engineering Projects',
@@ -154,7 +154,7 @@ const translations = {
     projectCategoryEngineering: 'Engineering',
     projectCount: '{count} projects',
     viewProject: 'View case study',
-    skillsEyebrow: 'Skills',
+    skillsEyebrow: 'nmap -sV skills.host',
     skillsTitle: 'A skill set you can<br><em>understand at a glance.</em>',
     programmingLanguages: 'Programming Languages',
     coreSkills: 'Core skills',
@@ -170,7 +170,7 @@ const translations = {
     problemSolving: 'Problem solving',
     certificates: 'Credentials',
     recognition: 'Recognition',
-    credentialsEyebrow: 'Credentials & Recognition',
+    credentialsEyebrow: 'openssl verify ~/certs.pem',
     credentialsTitle: 'Proof of progress.<br><em>Recognition that matters.</em>',
     certificateOne: 'CCNA: Introduction to Networks (ITN)',
     certificateTwo: '',
@@ -250,11 +250,11 @@ let currentPanel = 'about';
 let activeProject = null;
 
 const panelMeta = {
-  about: { index:'01', label:'aboutEyebrow' },
-  skills: { index:'02', label:'skillsEyebrow' },
-  projects: { index:'03', label:'projectsEyebrow' },
-  experience: { index:'04', label:'experienceEyebrow' },
-  credentials: { index:'05', label:'credentialsEyebrow' }
+  about: { label:'aboutEyebrow' },
+  skills: { label:'skillsEyebrow' },
+  projects: { label:'projectsEyebrow' },
+  experience: { label:'experienceEyebrow' },
+  credentials: { label:'credentialsEyebrow' }
 };
 
 function updateSkillStatus() {
@@ -413,7 +413,6 @@ function activatePanel(name, updateHistory = true) {
       panel.scrollTop = 0;
     }
   });
-  document.querySelector('[data-current-index]').textContent = panelMeta[name].index;
   document.querySelector('[data-current-label]').textContent = translations[currentLanguage][panelMeta[name].label];
   if (updateHistory && location.hash !== `#${name}`) history.pushState({ panel:name }, '', `#${name}`);
 }
@@ -446,23 +445,6 @@ if (homeLink) homeLink.addEventListener('click', event => {
   activatePanel('about');
 });
 window.addEventListener('popstate', () => activatePanel(location.hash.slice(1) || 'about', false));
-
-document.querySelectorAll('.timeline-entry').forEach(entry => {
-  const toggle = entry.querySelector('.timeline-toggle');
-  toggle.addEventListener('click', () => {
-    const wasOpen = entry.classList.contains('is-open');
-    document.querySelectorAll('.timeline-entry').forEach(item => {
-      item.classList.remove('is-open');
-      item.querySelector('.timeline-toggle').setAttribute('aria-expanded', 'false');
-      item.querySelector('.timeline-toggle').textContent = '＋';
-    });
-    if (!wasOpen) {
-      entry.classList.add('is-open');
-      toggle.setAttribute('aria-expanded', 'true');
-      toggle.textContent = '−';
-    }
-  });
-});
 
 document.querySelectorAll('.skill-cloud button').forEach(button => {
   button.setAttribute('aria-pressed', 'false');
