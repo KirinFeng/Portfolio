@@ -120,8 +120,8 @@
             </article>
             <article class="card metric-card">
               <span>02</span>
-              <strong data-count="6">0</strong>
-              <p data-i18n="projectsMetric">Featured projects</p>
+              <strong data-count="18">0</strong>
+              <p data-i18n="projectsMetric">Documented projects</p>
             </article>
           </div>
         </section>
@@ -165,36 +165,9 @@
 
         <section class="tab-panel" id="projects" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" hidden>
           <div class="panel-heading">
-            <h1 data-i18n-html="projectsTitle">Featured Projects</h1>
+            <h1 data-i18n-html="projectsTitle">Projects from the master résumé</h1>
           </div>
-          <div class="panel-grid projects-grid">
-            <article class="card project-card project-featured">
-              <div class="project-art art-one" aria-hidden="true"><span>01</span><div class="mini-ui"><i></i><i></i><b></b></div></div>
-              <div class="project-content">
-                <div class="project-meta"><span data-i18n="projectOneType">研究生安全项目</span><span>STRIDE / OWASP</span></div>
-                <h3 data-i18n="projectOneTitle">软件安全评估与威胁建模</h3>
-                <p data-i18n="projectOneBody">评估多租户电商 SaaS 的安全成熟度、信任边界与优先风险。</p>
-                <button class="project-open" type="button" data-project="one"><span data-i18n="viewProject">查看案例</span><b>↗</b></button>
-              </div>
-            </article>
-
-            <article class="card project-card project-compact">
-              <div class="compact-mark mark-orange"><span>02</span><i></i><i></i><i></i></div>
-              <div class="project-content">
-                <div class="project-meta"><span data-i18n="projectTwoType">研究生取证项目</span><span>Autopsy / E01</span></div>
-                <h3 data-i18n="projectTwoTitle">Autopsy 数字取证调查</h3>
-                <button class="project-open icon-only" type="button" data-project="two" aria-label="查看项目二" data-i18n-aria="projectTwoLabel">↗</button>
-              </div>
-            </article>
-
-            <article class="card project-card project-compact">
-              <div class="compact-mark mark-lime"><span>03</span><div class="stack"><i></i><i></i><i></i></div></div>
-              <div class="project-content">
-                <div class="project-meta"><span data-i18n="projectThreeType">研究生安全项目</span><span>ZAP / DVWA</span></div>
-                <h3 data-i18n="projectThreeTitle">Web 应用漏洞评估</h3>
-                <button class="project-open icon-only" type="button" data-project="three" aria-label="查看项目三" data-i18n-aria="projectThreeLabel">↗</button>
-              </div>
-            </article>
+          <div class="project-catalog" data-project-list aria-live="polite">
           </div>
         </section>
 
@@ -279,6 +252,7 @@
       <span class="dialog-type"></span>
       <h2 id="dialog-title"></h2>
       <p class="dialog-summary"></p>
+      <ul class="dialog-highlights"></ul>
       <div class="dialog-facts">
         <div><span data-i18n="dialogRole">我的角色</span><strong class="dialog-role"></strong></div>
         <div><span data-i18n="dialogOutcome">核心成果</span><strong class="dialog-outcome"></strong></div>
