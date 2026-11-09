@@ -39,6 +39,7 @@ No installation or compilation is required.
 ├── favicon.svg
 ├── index.html
 ├── README.md
+├── resume.pdf
 ├── script.js
 ├── styles.css
 └── img/
@@ -47,7 +48,7 @@ No installation or compilation is required.
     └── icon-title-out.png
 ```
 
-The download controls reference `resume.pdf`, but that file is not included by default. Add it to the project root to enable PDF downloads.
+The download controls reference `resume.pdf`, which is included in the project root.
 
 ### File reference
 
@@ -201,7 +202,7 @@ Use `data-count` for the target and optional `data-suffix` for a suffix.
 
 #### PDF résumé
 
-Place `resume.pdf` in the project root. Both download links already point there. Use a local HTTP server or deployed site to test the download.
+`resume.pdf` is stored in the project root, and both download links point there. To update the résumé, replace that file with the same name. Use a local HTTP server or the deployed site to test the download.
 
 ### Run locally
 
@@ -275,6 +276,7 @@ Modern evergreen browsers are recommended because the site uses `<dialog>`, `col
 ├── favicon.svg
 ├── index.html
 ├── README.md
+├── resume.pdf
 ├── script.js
 ├── styles.css
 └── img/
@@ -283,7 +285,7 @@ Modern evergreen browsers are recommended because the site uses `<dialog>`, `col
     └── icon-title-out.png
 ```
 
-下载按钮引用了 `resume.pdf`，但项目默认未包含该文件。如需 PDF 下载，请将其放入根目录。
+下载按钮引用了根目录中的 `resume.pdf`，该文件已包含在项目中。
 
 ### 文件详细说明
 
@@ -433,7 +435,7 @@ Modern evergreen browsers are recommended because the site uses `<dialog>`, `col
 
 #### PDF 简历
 
-将文件命名为 `resume.pdf` 并放入项目根目录。两个下载入口已指向该路径。请通过本地 HTTP 服务或已部署站点测试下载。
+`resume.pdf` 位于项目根目录，两个下载入口均指向该路径。如需更新简历，用同名文件替换即可。请通过本地 HTTP 服务或已部署站点测试下载。
 
 ### 本地运行
 
